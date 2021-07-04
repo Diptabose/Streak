@@ -14,6 +14,7 @@ function append(message,position)
  messageElement.classList.add('message');
  messageElement.classList.add(position);
  messageContainer.append(messageElement);
+ messageContainer.scrollTop=messageContainer.scrollHeight;
  if(position=='left')
  {
    audio_recieve.play();
@@ -22,11 +23,14 @@ function append(message,position)
    audio_send.play();
  }
 }
+
+
 sendbtn.addEventListener('click',(event)=>{
   event.preventDefault();
   const message=TextInp.value;
   if(message=="")
   {
+    TextInp.focus();
     return;
   }
   append(`You:${message}`,'right');
