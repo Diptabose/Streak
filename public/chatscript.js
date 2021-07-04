@@ -27,7 +27,7 @@ sendbtn.addEventListener('click',(event)=>{
   const message=TextInp.value;
   if(message=="")
   {
-    alert('enter text');
+    return;
   }
   append(`You:${message}`,'right');
   socket.emit('send',message);
