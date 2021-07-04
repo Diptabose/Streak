@@ -6,7 +6,7 @@ const INDEX='/Chat.html';
 const server=express();
 server.use(express.static("public"));
 server.use((req,res)=>{
-  res.sendFile(INDEX,{root:public})
+  res.sendFile(INDEX,{root:__dirname})
   });
 server.listen(PORT,()=>{
   console.log('listening on some port')}
