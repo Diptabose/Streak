@@ -1,4 +1,4 @@
-const socket=io('http://localhost:8000');
+const socket=io();
 
 let sendbtn=document.getElementById("SendText");
 let TextInp=document.getElementById('InpText');
@@ -34,6 +34,7 @@ sendbtn.addEventListener('click',(event)=>{
   append(`You:${message}`,'right');
   socket.emit('send',message);
   TextInp.value="";
+  TextInp.focus();
 });
 
 const name=window.prompt('Enter name');
