@@ -20,5 +20,17 @@ io.on('connection',socket=>{
     socket.broadcast.emit('left',users[socket.id]);
     delete users[socket.id];
   });
-
 });
+ setInterval(socket.on('timerstamp',()=>{
+   let d=new Date().toString();
+   socket.emit('recievetime',d);
+ });
+    
+ 
+
+
+
+
+
+
+ 
