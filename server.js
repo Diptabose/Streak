@@ -3,7 +3,7 @@ const socketIO=require('socket.io');
 const fs=require('fs');
 const PORT=process.env.PORT||3000;
 const path=require('path');                   
-const INDEX='/Chat.html';
+const INDEX='/intro.html';
 const app=express().use(express.static(path.join(__dirname,'public'))).get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'public','Chat.html'));
 }).listen(PORT,()=>console.log('listen'));
