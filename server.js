@@ -9,13 +9,20 @@ const app=express().use(express.static(path.join(__dirname,'public'))).get('/',(
 }).listen(PORT,()=>console.log('listen'));
 const io=socketIO(app);
 const users={};
+const typers=[];
 io.on('connection',socket=>{
   socket.on('new-user-joined',name=>{
     console.log('User',name);     
     users[socket.id]=name;
     socket.broadcast.emit('user-joined',name);
   });
+    
+    socket.on('Typers',typename=>{
+    typers.length=0;
+    typers.push(typename);
+    socket.broadcast.emit('typersarray',typers);
 
+  });
   socket.on('send',message=>{
     socket.broadcast.emit('recieve',{message:message,name:users[socket.id]});
   });
