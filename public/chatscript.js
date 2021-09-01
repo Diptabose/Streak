@@ -1,4 +1,4 @@
-const socket=io('http://localhost:8000');
+const socket=io();
 let sendbtn=document.getElementById("SendText");
 let TextInp=document.getElementById('InpText');
 let messageContainer=document.querySelector(".chatarea");
