@@ -17,7 +17,7 @@ io.on('connection',socket=>{
     users[socket.id]=name;
       activeUsers.push(name);
     socket.broadcast.emit('user-joined',name);
-      socket.emit('online',activeUsers);
+      socket.broadcast.emit('online',activeUsers);
   });
     
     socket.on('Typers',typename=>{
