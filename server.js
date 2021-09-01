@@ -7,10 +7,10 @@ const INDEX='/intro.html';
 const app=express().use(express.static(path.join(__dirname,'public'))).get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'public','Chat.html'));
 }).listen(PORT,()=>console.log('listen'));
-const io=socketIO(app);
-const users={};
-const typers=[];
-const activeUsers=[];
+global.io=socketIO(app);
+var users={};
+var typers=[];
+var activeUsers=[];
 io.on('connection',socket=>{
   socket.on('new-user-joined',name=>{
     console.log('User',name);     
