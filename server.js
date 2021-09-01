@@ -10,11 +10,14 @@ const app=express().use(express.static(path.join(__dirname,'public'))).get('/',(
 const io=socketIO(app);
 const users={};
 const typers=[];
+const activeUsers=[];
 io.on('connection',socket=>{
   socket.on('new-user-joined',name=>{
     console.log('User',name);     
     users[socket.id]=name;
+      activeUsers.push(name);
     socket.broadcast.emit('user-joined',name);
+      socket.emit('online',activeUsers);
   });
     
     socket.on('Typers',typename=>{
@@ -39,6 +42,7 @@ io.on('connection',socket=>{
   socket.on('disconnect',message=>{
     socket.broadcast.emit('left',users[socket.id]);
     delete users[socket.id];
+     activeUsers.pop(users[socket.id]); 
   });
 
 });
