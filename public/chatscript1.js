@@ -156,7 +156,10 @@ socket.on("removefromothers",()=>{
 });
 
 socket.on("returntypers",(typers)=>{
-  
+  if(typers.includes(uname))
+  {
+    typers.pop(uname);
+  }
   var len=typers.length;
   var joining="is";
   let str= typers.join(", ");
