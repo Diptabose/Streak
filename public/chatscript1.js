@@ -1,4 +1,4 @@
-const socket=io('http://localhost:8000');
+const socket=io();
 
 const uname=window.localStorage.getItem("uname");
 let sendbtn=document.getElementById("SendText");
