@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+
+ <link rel="stylesheet" href="style1.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+ <script defer src="http://localhost:8000/socket.io/socket.io.js">
+  </script>
+  
+<script defer src="chatscript1.js" ></script> 
+  
+  <body id="bodyfix">
+    
+    <div id="header">
+      <div id="headeralign">
+      <div id="Logo">
+           <img id="logofix" class="logoimg" src="Logo.webp" alt="">
+           <p id="pfix">iChat</p>
+      </div>
+      
+      
+      <div id="seperator">
+        
+        
+        
+        <div id='typing'>
+           <p id="typerstring"></p>
+        </div>
+      
+      
+      
+      
+      <div id="online">
+         <button id="onlinebtn" class="dropbtn" type="submit">Online
+         </button>
+         <div id="onid" class="drop-online">
+            <ul id="onlinelist">
+              <li>You</li>
+              
+            </ul>
+         </div>
+       </div>
+       
+       
+       </div>
+       
+       
+       </div>
+    </div>
+    
+ <div id="chatrelative"> 
+    <div id="chatareaid" class="chatarea">
+ <!-- <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>
+  <p>Hi<p>-->
+   </div> 
+   </div>
+      
+ <div id="TextInput"> 
+  <div id="text-type">
+        <input id="InpText" autocomplete="off" type="text" placeholder="Text here" value="">
+        <label for="fileupload">
+            <img id="cambutton" src="Cam3.png">
+        
+            <input type="file" id="fileupload" accept="images/*">
+          </label>
+           <button id="SendText" type="submit">Send</button>
+     </div> 
+    </div>
+  
+    </body>
+    
+    
+    
+</html>
+    
+  
+  
+  

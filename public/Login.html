@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+
+ <link rel="stylesheet" href="Login.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+ <script defer src="http://localhost:8000/socket.io/socket.io.js">
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script defer src="Login.js"></script>
+  
+<body>
+  
+  <div id="log1">
+  <div id="log">
+  <h1>SignIn</h1>
+ <form id="loginform">
+   <div>
+     <p>Username</p>
+      <input id="name" type="text" name="L_Username" placeholder="Username" >
+    </div>
+    <div>
+      <p>Email</p>
+      <input id="mailsend" type="email" name="UserEmail" placeholder="Email">
+      </div>
+    </form>
+  </div>
+     <div id="next">
+     <button id="continue">Continue</button>
+     </div>
+  </div>
+  </body>
+  </html>
