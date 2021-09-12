@@ -197,13 +197,13 @@ html
   position:absolute;
   z-index:1;
   bottom:1%;
-  border:2px solid black;
+ /* border:2px solid black;*/
   margin:2%;
   width:95%;
 }
 
 #text-type{
- border:2px solid black;
+/* border:2px solid black;*/
   width:100%;
   display:flex;
   align-items: center;
@@ -211,7 +211,7 @@ html
   
 }
 #text-type input{
- border:2px solid black; 
+ /*border:2px solid black; */
   width:78%;
   outline:none;
   padding:10px;
@@ -219,7 +219,7 @@ html
 }
 
 #text-type button{
- border:2px solid black;
+/* border:2px solid black;*/
   padding:10px;
   border-radius:150px;
 }
