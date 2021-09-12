@@ -198,11 +198,12 @@ html
   z-index:1;
   bottom:1%;
   border:2px solid black;
- margin:2%;
+  margin:2%;
 }
 
 #text-type{
  border:2px solid black;
+  width:100%;
   display:flex;
   align-items: center;
   justify-content: center;
