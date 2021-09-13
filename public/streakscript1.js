@@ -48,7 +48,7 @@ body.onload=function Load(){
    }
    else if(et>86400&&et<100800){
      
-     TimerLogo.innerText="⏳"
+     TimerLogo.innerText="⏳";
      Timer.innerText="Time Remaining:00:00:00";
      UpdateBtn.addEventListener("click",Updater);
      
@@ -122,7 +122,7 @@ function Updater(){
  window.localStorage.setItem("UpdatedTime",JSON.stringify(d.getTime()));
  console.log(window.localStorage.getItem("UpdatedTime"));
   window.localStorage.setItem("scorecount",text.toString());
-  
+  TimerLogo.innerText="";
   if(text===100)
   {
     StreakScore.innerText="💯";
