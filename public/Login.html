@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <title>Chat</title>
+
+ <link rel="stylesheet" href="/Login.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+ <script defer src="/socket.io/socket.io.js">
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script defer src="/Login.js"></script>
+ </head>
+<body>
+  
+  <div id="log1">
+  <div id="log">
+  <h1>SignUp</h1>
+ <form id="loginform">
+   <div>
+     <p>Username</p>
+     <p id="Servererror" class="rederrormsg">User Name or Email already exists<p>
+      <input id="name" type="text" name="L_Username" placeholder="Username" autocomplete="off">
+    </div>
+    <div>
+      <p>Password</p>
+      <p id="passerror" class="rederrormsg">Enter a password atleast 8 characters long</p>
+      <input id="password" type="password" name="L_UserPassword" autocomplete="off" placeholder="Password">
+    </div>
+    <div>
+    
+      <p>Confirm Password</p>
+      <p id="conpass_error" class="rederrormsg">Password mismatch!!!</p>
+      <input id="con_pass" type="password" name="L_UserConPassword" placeholder="Confirm Password" autocomplete="off">
+    </div>
+    <div>
+      <p>Email</p>
+      <p id="mail_error" class="rederrormsg">Enter a Valid Email!!!</p>
+      <input id="mailsend" type="email" name="UserEmail" autocomplete="off" placeholder="Email">
+      </div>
+    </form>
+  </div>
+     <div id="next">
+     <button id="continue">Continue</button>
+     </div>
+     <p>Already SignedIn? Try <a href="LoginUser.html">Login</a></p>
+  </div>
+  </body>
+  </html>

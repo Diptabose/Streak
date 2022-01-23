@@ -1,0 +1,126 @@
+
+
+/*[themes="def"]{
+  --ThemeHead:linear-gradient(to right,#1ea785,#1ea785);
+  --ThemeBody:url("Chatbg.png");
+}
+[themes="theme1"]{
+ 
+  --ThemeHead:linear-gradient(to right , blue , white);
+  --ThemeBody:linear-gradient(to top right , red,white);
+}
+
+[themes="theme2"]{
+  --ThemeHead:linear-gradient(to right , blue , green);
+  --ThemeBody:linear-gradient(to top right , red,black);
+  
+}
+[themes="theme3"]{
+  --ThemeHead:linear-gradient(to right , blue , white);
+  --ThemeBody:linear-gradient(to top right , yellow,red);
+}
+[themes="theme4"]{
+  --ThemeHead:linear-gradient(to right , blue , red);
+  --ThemeBody:linear-gradient(to top right , red,orange);
+}
+[themes="theme5"]{
+  --ThemeHead:linear-gradient(to right , blue , pink);
+  --ThemeBody:linear-gradient(to top right , red,pink);
+}
+
+*/
+
+
+
+
+
+
+
+#wallpaper , #HtmlColorPickerBody , #HtmlColorPickerHead{
+  display:none;
+}
+
+
+.margin-0{
+  margin:0;
+}
+.ThemeChanger-hide{
+  display:none;
+}
+
+
+
+.ColorPicker , .ColorPickerManual{
+  height:40px;
+  width:40px;
+  margin:10px;
+  padding:0;
+  border:2px solid black;
+  border-radius:50%;
+}
+
+
+.align-nowrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+.align{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+.alignrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.theme1{
+  background-image:linear-gradient(to top right , red,white);
+}
+.theme2{
+  background-image:linear-gradient(to top right , red,black);
+}
+.theme3{
+  background-image:linear-gradient(to top right , yellow,red);
+}
+.theme4{
+  background-image:linear-gradient(to top right , red,orange);
+}.theme5{
+  background-image:linear-gradient(to top right , red,pink);
+}
+.headerColor , .bodyColor{
+  background-image:linear-gradient(to top right , violet , indigo , blue , green , yellow , orange , red);
+}
+
+.but{
+  border:none;
+  border-style:none;
+  border-radius :50px;
+  outline :none;
+  color:white;
+  padding:15px;
+  margin:10px;
+  background-image:var(--ThemeBody);
+}
+
+
+.blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+   content: '';
+    z-index:1;
+    background-color:rgba(0,0,0,0);
+   
+}
+
+.popup { display: none; }
+.open { display: block; }

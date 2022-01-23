@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <title>Chat</title>
+ <link rel="stylesheet" href="/style1.css">
+ <link rel="stylesheet" href="/ChatTheme.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+ <script defer src="/socket.io/socket.io.js">
+  </script>
+ </head> 
+
+  
+  <body id="bodyfix">
+  <div id="header">
+     <div id="headeralign">
+          <div id="Logo">
+              <img id="logofix" class="logoimg" src="/Logo.webp" alt="">
+          </div>
+     </div>
+  
+  <div id="seperator">
+        <div id='typing'>
+       <p id="typerstring"></p>
+        </div>
+        
+        
+      <div id="online">
+         <button id="onlinebtn" class="dropbtn" type="submit">Online
+         </button>
+         <div id="onlineShow" class="popup">
+         <div id="onlineHide" class="blocker"></div>
+         <div id="onid" class="drop-online">
+            <ul id="onlinelist">
+              <li>You</li>
+            </ul>
+         </div>
+         </div>
+       </div>
+   </div>
+  <div id="chatMenu">
+    <button id="3dotsInChat" class="noButtonBorder"><img src="/3dot.png"/></button>
+    <div id="showSettingsMenu" class="popup" >
+      <div id="hideSettingsMenu" class="blocker" ></div>
+         <div id="chatSettings" class=" show chatSettings">
+           <ul>
+             <li><button id="chatThemeSettingsView" class="noButtonBorder">Theme</button></li>
+             <li> 
+             <div class="switch_align">
+                <p>White header text</p>
+                <button id="headerTextWhite" class="toggle">
+                   <div
+                  id="switchball" class="toggle-ball">
+                   </div>
+                </button>
+              </div>
+             </li>
+           </ul>
+         </div>
+       </div>
+       </div>
+       
+</div>
+
+    
+    
+    
+   <div id="chatrelative">
+   <div id="showTheme" class="popup">
+  <div id="hideTheme" class="blocker"></div>
+   <div class="ThemeChanger align-nowrap">
+   
+  <h1 class="margin-0">Theme</h1> 
+  
+  
+  
+  <div class="align">
+   <p>Color pallete:</p>
+   <div class="alignrow">
+    <button value="1" class="ColorPicker theme1"></button>
+    <button value="2" class="ColorPicker theme2"></button>
+    <button value="3" class="ColorPicker theme3"></button>
+    <button  value="4" class="ColorPicker theme4"></button>
+    <button value="5" class="ColorPicker theme5"></button>
+    </div>
+   </div>
+   
+   
+   
+   
+   <div class="align">
+      <p class="margin-0">Pick your own color:</p>
+      <div class="alignrow">
+       <div class="alignrow">
+     <p>Header</p>
+    <label for="HtmlColorPickerHead">
+     <div class="ColorPickerManual headerColor"></div>
+     <input id="HtmlColorPickerHead" type="color" />
+     </label>
+     </div>
+       <div class="alignrow">
+       <p>Body</p>
+    <label for="HtmlColorPickerBody">
+     <div class="ColorPickerManual bodyColor "></div>
+     <input id="HtmlColorPickerBody" type="color" />
+     </label>
+     </div>
+      </div>
+     <div class="alignrow">
+       <button id="themeset" class="but">Done</button>
+       <button id="themereset" class="but">Reset</button>
+     </div>
+   </div>
+   </div>
+  </div>
+
+   
+    <div id="chatareaid" class="chatarea">
+    </div>
+ </div>
+ <div id="TextInput"> 
+  <div id="text-type">
+        <textarea id="InpText" autocomplete="off" type="text" placeholder="Text here" rows="1" cols="1000" ></textarea>
+        <label for="fileupload">
+          <img id="cambutton" src="/Cam3.png">
+        
+          <input type="file" id="fileupload" accept="images/*">
+          </label>
+           <button id="SendText" type="submit">Send</button>
+     </div> 
+    </div>
+ <script  defer src="/chatscript1.js" ></script> 
+ <script src="/DarkThemeChat.js"></script>
+    </body>
+</html>
+    
+  
+  
+  

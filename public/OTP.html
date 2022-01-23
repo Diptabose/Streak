@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <title>Streaks</title>
+  <style>
+  
+  @media(prefers-color-scheme:dark)
+  {
+    body{
+      background-color:black;
+    }
+    h2{
+      color:white;
+    }
+    input{
+      color:white;
+    }
+  }
+  #container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin:50%;
+  }
+  h5{
+    color:#a3a3a3;
+  }
+  p{
+    color:#2297c6;
+  }
+  .timershow{
+    display:block;
+  }
+  .timehide{
+    display:none;
+  }
+    #form{
+   display:flex;
+   flex-direction:column;
+  }
+  input{
+    border:1px solid #2297c6;
+    padding:6px;
+    background-color:transparent;
+    border-radius:1em;
+  }
+  input:focus{
+    outline:none;
+  }
+ #continue{
+       color:white;
+    font-weight:bold;
+    border:none;
+     background-color:#2297c6;
+     padding:10px;
+     padding-right:30px;
+     padding-left:30px;
+     border-radius: 45px;
+     margin-top:60px;
+ }
+  #continue:hover{
+  background-color:rgb(2,73,166);
+  }
+  #continue:hover::after{
+  background-color:#2297c6;
+  }
+  #continue:focus{
+    outline:none;
+  }
+  </style>
+  </head>
+  <body id="body">
+<div id="container">
+ <h2>OTP</h2>
+    <form id="form">
+      <p id=redinvalid>Enter the OTP sent to your Email</p>
+      <h5 id= "timer" class="timershow"></h5>
+      <div id="eid">
+          <input id="Otp" type="number" name="S_UserOTP" placeholder="OTP" >
+       </div>
+   </form>
+    <div id="next">
+     <button id="continue">Continue</button>
+     </div>
+  </div>
+  
+  <script defer src="/socket.io/socket.io.js"></script>
+   <script defer src="/OTP.js"></script>
+  </body>
+  </html>
