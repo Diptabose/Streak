@@ -1,2 +1,2 @@
 # Streak
-This is repo for Streaks
+This is repo for Streaks . Streaks is chat app to maintain streaks with your friends .It uses nodejs as backend and html css and javascript as front end . Have fun....
