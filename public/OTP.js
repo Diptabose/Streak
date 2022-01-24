@@ -1,8 +1,8 @@
-const socket=io.connect('', {
-  'reconnection': true,
-  'reconnectionDelay': 100,
-  'reconnectionAttempts': 100
-});
+const socket=io();
+  
+  
+ 
+
 let btn=document.getElementById("continue");
 let otp_entered=document.getElementById("Otp");
 let Timer=document.getElementById("timer");
