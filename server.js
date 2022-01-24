@@ -35,12 +35,12 @@ var activeUsers=[];
 
 io.on('connection',async(socket)=>{
  
- const client = await pool.connect();
+/* const client = await pool.connect();
  var res= await client.query("select max(chatno) from messages");
  var ServerEnd= res.rows[0].max;
  console.log(res);
  await client.release();
- var offset=0;
+ var offset=0;*/
   socket.on("FetchMsg",async(sendMsgJson)=>{
     const client= await pool.connect();
     try{
