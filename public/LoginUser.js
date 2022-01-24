@@ -1,8 +1,8 @@
-const socket=/*io('http://localhost:8000');*/io.connect('', {
-  'reconnection': true,
-  'reconnectionDelay': 100,
-  'reconnectionAttempts': 100
-});
+const socket=io();
+  
+  
+
+
 var passError=document.getElementById("passerror");
 var pass=document.getElementById("password");
 var mailError=document.getElementById("mail_error");
