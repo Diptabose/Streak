@@ -1,8 +1,8 @@
-const socket=/*io('http://localhost:8000');*/io.connect('', {
-  'reconnection': true,
-  'reconnectionDelay': 100,
-  'reconnectionAttempts': 100
-});
+const socket=io();
+  
+  
+
+
 var serverError=document.getElementById("Servererror");
 var username = document.getElementById("name");
 var passError=document.getElementById("passerror");
