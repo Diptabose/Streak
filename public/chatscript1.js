@@ -1,8 +1,8 @@
-const socket=/*io('http://localhost:8000');*/io.connect('', {
-  'reconnection': true,
-  'reconnectionDelay': 500,
-  'reconnectionAttempts': 10
-});
+const socket=io();
+  
+  
+ 
+
 
 var userCount=0;
 let type=document.getElementById("typing");
