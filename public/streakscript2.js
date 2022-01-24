@@ -1,8 +1,8 @@
-const socket=io.connect('http://localhost:8000', {
-  'reconnection': true,
-  'reconnectionDelay': 100,
-  'reconnectionAttempts': 100
-});
+const socket=io.connect();
+  
+  
+
+
 var score= document.getElementById("score");
 var ichat=document.getElementById("ichat");
 var about=document.getElementById("about");
