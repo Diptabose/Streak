@@ -22,18 +22,18 @@ let transporter = nodemailer.createTransport({
 });
 
 const pool=new pg.Pool(
- /* {
+ {
  connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false
+    rejectUnauthorized: true
   }
- }*/
- {
+ }
+ /*{
 host:"localhost",
   port:"5432",
   user:"bose",
   password:"bose",
-  database:"streaks"}
+  database:"streaks"}*/
  
  );
 
