@@ -1,4 +1,4 @@
-const socket=io.connect('http://localhost:8000', {
+const socket=io.connect({
   'reconnection': true,
   'reconnectionDelay': 100,
   'reconnectionAttempts': 100
