@@ -38,27 +38,27 @@ document.getElementById('blocker').addEventListener('click',()=>{
 chatClick.forEach(function(item){
   console.log(item);
   item.addEventListener('click',function(){
-    document.location="Chat1.html";
+    document.location="/Chat1.html";
   });
 });
 
 
 
 
-window.addEventListener("load",function DomLoad(){
+function DomLoad(){
   document.getElementById("userinsert").innerText="Welcome "+UserName;
   document.getElementById("cname").innerHTML=UserName;
   var scoreFromMem=Number(window.localStorage.getItem('streakscore'));
   var upt=Number(window.localStorage.getItem("UpdatedTime"));
  var d = new Date();
-  /*//socket.emit("RequestUserDetails",UserName,(RJson)=>{
-   // console.log("Inside socket");
-   //var ParseRJson=JSON.parse(RJson);
-// console.log(ParseRJson);
-  // var streakScore=ParseRJson.rows[0].streakscore;
- //   var timeUpt=ParseRJson.rows[0].updatedtime;
-  //window.localStorage.setItem("scorecount",String(streakScore));
-   // window.localStorage.setItem("UpdatedTime",timeUpt);*/
+
+  
+  
+
+
+ 
+  
+
   if(scoreFromMem==100){
       StreakScore.innerText="💯";
   }
@@ -99,7 +99,7 @@ window.addEventListener("load",function DomLoad(){
      UpdateBtn.removeEventListener("click",Updater);
    }
   }
-});
+}
   
   
   function CalH(sec){
@@ -207,10 +207,10 @@ logout.addEventListener('click',()=>{
   }
 })
 
-chatClick.forEach(function(item){
-  console.log(item);
-  item.addEventListener('click',function(){
-    document.location="Chat1.html";
-  });
-});
+DomLoad();
+ 
+
+   
+ 
+
    
