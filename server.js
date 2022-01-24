@@ -18,8 +18,8 @@ global.io=socketIO(app);
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'streaksa1251@gmail.com',
-    pass: 'bose1234'
+    user: 'diptabose484@gmail.com',
+    pass: 'immortal@ironman'
   }
 });
 
