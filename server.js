@@ -21,12 +21,12 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-/*const pool=new pg.Pool({
+const pool=new pg.Pool({
  connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized:true
   }
- });*/
+ });
 
 
 var users={};
