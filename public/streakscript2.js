@@ -1,4 +1,8 @@
-const socket=io();
+const socket=io.connect('http://localhost:8000', {
+  'reconnection': true,
+  'reconnectionDelay': 100,
+  'reconnectionAttempts': 100
+});
 var score= document.getElementById("score");
 var ichat=document.getElementById("ichat");
 var about=document.getElementById("about");
@@ -80,7 +84,7 @@ function DomLoad(){
     updateDetailsOnServer("0",0);
    }
    else if(et>86400&&et<100800){
-     TimerLogo.innerText="鈴�"
+     TimerLogo.innerText="鈴�"
      Timer.innerText="Time Remaining:00:00:00";
      UpdateBtn.addEventListener("click",Updater);
    }
@@ -191,19 +195,6 @@ ichat.addEventListener('click',()=>{
 });
 about.addEventListener('click',()=>{
   AboutPage.scrollIntoView(true);
-});
-
-
-
-DomLoad();
-
-   about.addEventListener('click',()=>{
-  AboutPage.scrollIntoView(true);
-});
-
-DomLoad();
-
-   ;
 });
 
 DomLoad();
