@@ -1,6 +1,8 @@
 const express=require('express');
 const socketIO=require('socket.io');
 const fs=require('fs');
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+
 const PORT=process.env.PORT||3000;
 const path=require('path'); 
 const nodemailer = require('nodemailer');
