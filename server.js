@@ -5,7 +5,7 @@ const PORT=process.env.PORT||3000;
 const path=require('path'); 
 const nodemailer = require('nodemailer');
 const pg=require('pg');
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+//process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 const INDEX='/IntroLogo.html';
 const app=express().use(express.static(path.join(__dirname,'public'))).get('/',(req,res)=>{
  res.sendFile(path.join(__dirname,'public','IntroLogo.html'));
