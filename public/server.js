@@ -21,6 +21,7 @@ let transporter = nodemailer.createTransport({
   }
 });
 
+try{
 const pool=new pg.Pool(
  {
  connectionString: process.env.DATABASE_URL,
@@ -28,14 +29,19 @@ const pool=new pg.Pool(
     rejectUnauthorized: true
   }
  }
- /*{
-host:"localhost",
-  port:"5432",
-  user:"bose",
-  password:"bose",
-  database:"streaks"}*/
+
+
+
+
+ 
+
  
  );
+ }
+catch(error)
+ {
+  console.error(error);
+  }
 
 
 var users={};
