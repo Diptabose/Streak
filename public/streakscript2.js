@@ -1,8 +1,8 @@
-const socket=io.connect( {
-  'reconnection': true,
-  'reconnectionDelay': 100,
-  'reconnectionAttempts': 100
-});
+const socket=io();
+
+  
+  
+
 var score= document.getElementById("score");
 var ichat=document.getElementById("ichat");
 var about=document.getElementById("about");
@@ -12,7 +12,7 @@ var ChatPage=document.getElementById("Chatid");
 var AboutPage=document.getElementById("AboutPageid");
 var UpdateBtn=document.getElementById("update");
 var StreakScore= document.getElementById("streakscore");
-var ScrollContent=document.getElementById("contentscroll");
+/*var ScrollContent=document.getElementById("contentscroll");*/
 var dark_toggle=document.getElementById("switch");
 //var theme=document.getElementById("theme-link");
 //var menu= document.getElementById("menu");
