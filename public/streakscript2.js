@@ -51,7 +51,7 @@ chatClick.forEach(function(item){
   });
 });
 
-function DomLoad(){
+/*function DomLoad(){
   document.getElementById("userinsert").innerText="Welcome "+UserName;
   document.getElementById("cname").innerHTML=UserName;
   var scoreFromMem=Number(window.localStorage.getItem('streakscore'));
@@ -98,7 +98,7 @@ function DomLoad(){
      UpdateBtn.removeEventListener("click",Updater);
    }
   }
-}
+}*/
   
   
   function CalH(sec){
@@ -197,6 +197,6 @@ about.addEventListener('click',()=>{
   AboutPage.scrollIntoView(true);
 });
 
-DomLoad();
+//DomLoad();
 
    
