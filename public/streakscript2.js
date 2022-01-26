@@ -54,7 +54,7 @@ for(var i=0;i<chatClick.length;i++)
   {
     chatClick[i].addEventListener('click",function(){
             document.location="Chat1.html";
-                                  }
+                                  });
   }
 
 /*function DomLoad(){
