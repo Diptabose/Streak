@@ -226,8 +226,11 @@ for(var i=0; i< blockerClick.length ;i++)
 
 
 function popupClose(x){
-x.forEach(popClose);
-}
+// x.forEach(popClose);
+  for(var i=0;i<x.length;i++)
+  {
+    popClose(x[i]);
+ }
 
 function popClose(item){
   item.classList.remove('open');
