@@ -231,7 +231,7 @@ function popupClose(x){
   {
     popClose(x[i]);
  }
-
+}
 function popClose(item){
   item.classList.remove('open');
 }
