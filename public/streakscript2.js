@@ -44,12 +44,18 @@ logout.addEventListener('click',()=>{
     document.location.replace('Login.html');
   }
 })
-chatClick.forEach(function(item){
+/*chatClick.forEach(function(item){
   console.log(item);
   item.addEventListener('click',function(){
     document.location="Chat1.html";
   });
-});
+});*/
+for(var i=0;i<chatClick.length;i++)
+  {
+    chatClick[i].addEventListener('click",function(){
+            document.location="Chat1.html";
+                                  }
+  }
 
 /*function DomLoad(){
   document.getElementById("userinsert").innerText="Welcome "+UserName;
