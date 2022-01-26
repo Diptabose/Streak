@@ -60,12 +60,19 @@ if(!(themeStateInMemory==undefined||themeStateInMemory==null))
    }
  }
  
-themeSelect.forEach(function(item){
-item.addEventListener('click',function(e){
-var themeNumber=Number(e.target.value);
-themeChanger(themeNumber);
-  });
-});
+for(var i=0;i<themeSelect.length;i++)
+{
+  themeSelect[i].addEventListener('click',function(e){
+    var themeNumber=Number(e.target.value);
+    themeChanger(themeNumber);
+ });
+}
+// themeSelect.forEach(function(item){
+// item.addEventListener('click',function(e){
+// var themeNumber=Number(e.target.value);
+// themeChanger(themeNumber);
+//   });
+// });
 function themeChanger(index)
 {
   var headTheme= themeArray[index].head;
