@@ -61,7 +61,7 @@ function DomLoad(){
   document.getElementById("userinsert").innerText="Welcome "+UserName;
   document.getElementById("cname").innerHTML=UserName;
   var scoreFromMem=Number(window.localStorage.getItem('streakscore'));
-  var upt=Number(window.localStorage.getItem("UpdatedTime"));
+  var upt=window.localStorage.getItem("UpdatedTime");
  var d = new Date();
   if(scoreFromMem==100){
       StreakScore.innerText="💯";
@@ -71,11 +71,11 @@ function DomLoad(){
  //console.log(StreakScore);
   }
   
-  if(upt===0||window.localStorage.getItem("UpdatedTime")=='null')
+  if(parseInt(upt)===0||window.localStorage.getItem("UpdatedTime")==null||window.localStorage.getItem("UpdatedTime")==undefined||window.localStorage.getItem("UpdatedTime")=="null")
   {
     UpdateBtn.addEventListener("click",Updater);
   }
-  else if(upt!=0)
+  else if(parseInt(upt)!=0)
   {
    var et=Math.floor((d.getTime()-upt)/1000);
    console.log("The actual time: "+d.getTime());
@@ -203,6 +203,6 @@ about.addEventListener('click',()=>{
   AboutPage.scrollIntoView(true);
 });
 
-//DomLoad();
+DomLoad();
 
    
