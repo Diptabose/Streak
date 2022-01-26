@@ -425,6 +425,7 @@ align-items:flex-start;
   align-items:center;
   width:100%;
   margin-bottom:10px;
+  cursor:pointer;
 }
 .msgContent{
   display:flex;
