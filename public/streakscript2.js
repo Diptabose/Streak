@@ -57,7 +57,7 @@ for(var i=0;i<chatClick.length;i++)
                                   });
   }
 
-unction DomLoad(){
+function DomLoad(){
   document.getElementById("userinsert").innerText="Welcome "+UserName;
   document.getElementById("cname").innerHTML=UserName;
   var scoreFromMem=Number(window.localStorage.getItem('streakscore'));
