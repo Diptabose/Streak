@@ -282,15 +282,15 @@ document.addEventListener("DOMContentLoaded", function LoadMsg(){
     console.log(initFetch);
     if(initFetch===1)
     {
-      var id= setTimeout(function() {
-        document.location.reload();
-      },4000);
+//       var id= setTimeout(function() {
+//         document.location.reload();
+//       },4000);
      socket.emit("FetchMsg",function onFetch(MsgJson){
        if(!userCount>0){
          var typeJson= typeof MsgJson;
          console.log("Typeof MsgJson is "+typeJson)
          if(typeJson=="string"){
-           clearTimeout(id);
+//            clearTimeout(id);
     userCount++;   
     console.log("Msg recieved from server");
     console.log(MsgJson);
