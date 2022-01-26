@@ -57,7 +57,7 @@ for(var i=0;i<chatClick.length;i++)
                                   });
   }
 
-/*function DomLoad(){
+unction DomLoad(){
   document.getElementById("userinsert").innerText="Welcome "+UserName;
   document.getElementById("cname").innerHTML=UserName;
   var scoreFromMem=Number(window.localStorage.getItem('streakscore'));
@@ -104,7 +104,7 @@ for(var i=0;i<chatClick.length;i++)
      UpdateBtn.removeEventListener("click",Updater);
    }
   }
-}*/
+}
   
   
   function CalH(sec){
