@@ -572,14 +572,14 @@ function ScrollFetch()
   if(messageContainer.scrollTop==0)
   {
     console.log("Here Scroll Top got 0");
-    var id=setTimeout(function() {
-      document.location.reload();
-    }, 4000);
+//     var id=setTimeout(function() {
+//       document.location.reload();
+//     }, 4000);
     socket.emit("FetchMsg",function onFetch(MsgJson){
     var typeofMsgJson= typeof MsgJson;
     if(typeofMsgJson=="string")
     {
-      clearTimeout(id);
+//       clearTimeout(id);
     console.log("Msg recieved from server");
     console.log(MsgJson);
     const ParseMsgJson= JSON.parse(MsgJson);
@@ -601,5 +601,3 @@ function ScrollFetch()
   });
   }
 }
-
-
