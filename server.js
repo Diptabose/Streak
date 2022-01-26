@@ -72,12 +72,15 @@ const client = await pool.connect();
   });
 
    socket.on('typers',(uname)=>{
+    console.log(users[socket.id]);
    if(!typers.includes(uname)){
      setTimeout(function(){
   var index= typers.indexOf(users[socket.id]);
   typers.splice(index,1);
   socket.broadcast.emit('typerlist',typers);
      },3000);
+    }
+    else{
      typers.push(uname);
      socket.broadcast.emit('typerslist',typers);
    }
