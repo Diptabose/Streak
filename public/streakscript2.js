@@ -71,7 +71,7 @@ function DomLoad(){
  //console.log(StreakScore);
   }
   
-  if(upt===0)
+  if(upt===0||window.localStorage.getItem("UpdatedTime")=='null')
   {
     UpdateBtn.addEventListener("click",Updater);
   }
