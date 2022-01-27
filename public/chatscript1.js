@@ -422,7 +422,7 @@ sendbtn.addEventListener('click',(event)=>{
   append(`${message}`,'right',0);
   TextInp.value="";
   TextInp.focus();
-  socket.emit('send',message);
+  socket.emit('send',uname,message);
   
 });
 
