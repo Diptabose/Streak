@@ -75,6 +75,7 @@ const client = await pool.connect();
  await client.release();
 
  var offset=0;
+ let USERNAME=null;
 
   socket.on("FetchMsg",async(msgid,sendMsgJson)=>{
 
@@ -125,7 +126,7 @@ const client = await pool.connect();
     console.log('User',name);  
 
     users[socket.id]=name;
-
+    USERNAME=name;
     activeUsers.push(name);
 
    // socket.broadcast.emit('user-joined',name);
@@ -146,7 +147,7 @@ const client = await pool.connect();
 
      setTimeout(function(){
 
-  var index= typers.indexOf(users[socket.id]);
+  var index= typers.indexOf(USERNAME);
 
   typers.splice(index,1);
 
@@ -466,15 +467,15 @@ const client = await pool.connect();
 
   socket.on('disconnect',message=>{
 
-    socket.broadcast.emit('left',users[socket.id]);
+    socket.broadcast.emit('left',USERNAME);
 
     delete users[socket.id];
 
-   let actIndex=activeUsers.indexOf(users[socket.id]);
+   let actIndex=activeUsers.indexOf(USERNAME);
 
    activeUsers.splice(actIndex,1);
 
-   let typIndex=typers.indexOf(users[socket.id]);
+   let typIndex=typers.indexOf(USERNAME);
 
    typers.splice(typIndex,1);
 
