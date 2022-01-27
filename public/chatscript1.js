@@ -448,7 +448,7 @@ document.getElementById("logofix").classList.add("logoimg");
 });
 
 
-onlineBtn.addEventListener("click",()=>{socket.emit("online",(users)=>addOnlineUser(users))};
+onlineBtn.addEventListener("click",()=>{socket.emit("online",(users)=>addOnlineUser(users))});
 //Display online users 
 function addOnlineUser(actvuser)
 {
