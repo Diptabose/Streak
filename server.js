@@ -229,8 +229,12 @@ const client = await pool.connect();
   socket.on('disconnect',message=>{
     socket.broadcast.emit('left',users[socket.id]);
     delete users[socket.id];
-    activeUsers.pop(users[socket.id]);
-    typers.pop(users[socket.id]);
+   let actIndex=activeUsers.indexOf(users[socket.id]);
+   activeUsers.splice(actIndex,1);
+   let typIndex=typers.indexOf(users[socket.id]);
+   typers.splice(typIndex,1);
+    //activeUsers.pop(users[socket.id]);
+    //typers.pop(users[socket.id]);
     check_null(users);
   });
 });
