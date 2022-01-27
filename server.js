@@ -130,8 +130,8 @@ const client = await pool.connect();
     activeUsers.push(name);
 
    // socket.broadcast.emit('user-joined',name);
-    socket.emit('online',activeUsers);
-    socket.broadcast.emit("online",activeUsers);
+//     socket.emit('online',activeUsers);
+//     socket.broadcast.emit("online",activeUsers);
 
     //socket.emit("ionline",activeUsers);
 
@@ -139,6 +139,7 @@ const client = await pool.connect();
 
   });
 
+  socket.on('online',(Users)=>{Users(activeUsers)});
    socket.on('typers',(uname)=>{
 
     console.log(users[socket.id]);
