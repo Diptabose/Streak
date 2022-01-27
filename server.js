@@ -90,12 +90,12 @@ const client = await pool.connect();
    }
    });
  
-  socket.on('send',async(message)=>{
-    socket.broadcast.emit('recieve',{message:message,name:users[socket.id]});
+  socket.on('send',async(sender,message)=>{
+    socket.broadcast.emit('recieve',{message:message,name:sender});
     
     const client= await pool.connect();
     try{
-      const res= await client.query('insert into messages(sender,msg) values($1,$2)',[users[socket.id],message]);
+      const res= await client.query('insert into messages(sender,msg) values($1,$2)',[sender , message]);
       console.log("Msg inserted");
       await client.release();
     }
