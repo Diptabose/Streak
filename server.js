@@ -163,7 +163,25 @@ const client = await pool.connect();
 
    });
 
- 
+ socket.on('CheckOutdatedVersionUser,async(name,verify)=>{
+           const client=await pool.connect();
+        try{
+         const res= await client.query('select username from login where username=$1',[name]);
+         if(res.rowsCount>0)
+          {
+           verify(true);
+           }
+         else{
+          verify(false);
+          }
+         }
+        catch(error)
+         {
+          verify(-1);
+          await client.release();
+          }
+      await client.release();
+ });
 
   socket.on('send',async(sender,message)=>{
 
