@@ -8,7 +8,7 @@ if(name==null||name==undefined)
   
 }else{
 socket.emit('CheckOutdatedVersionUser',name,(verified)=>{
-  if(!verified)
+  if(verified==false)
   {
     document.location.replace('Login.html');
   }
@@ -16,7 +16,7 @@ socket.emit('CheckOutdatedVersionUser',name,(verified)=>{
   {
   document.location.replace('Error.html');
   }
-  else{
+  else if(verified==true){
     window.localStorage.setItem('isOld',"0");
   }
 }
