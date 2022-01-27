@@ -163,7 +163,7 @@ const client = await pool.connect();
 
    });
 
- socket.on('CheckOutdatedVersionUser,async(name,verify)=>{
+ socket.on('CheckOutdatedVersionUser',async(name,verify)=>{
            const client=await pool.connect();
         try{
          const res= await client.query('select username from login where username=$1',[name]);
