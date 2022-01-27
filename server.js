@@ -43,9 +43,13 @@ const client = await pool.connect();
  console.log(res);
  await client.release();
  var offset=0;
-  socket.on("FetchMsg",async(sendMsgJson)=>{
+  socket.on("FetchMsg",async(msgid,sendMsgJson)=>{
     const client= await pool.connect();
     try{
+     if(msgid!=0)
+      {
+      ServerEnd=msgid;
+       }
       const res= await client.query('select * from (select * from messages order by chatno desc limit $1) as foo offset $2 limit 50 ',[ServerEnd,offset]);
       console.log(res.rows);
       if(res.rows.length!=0){
