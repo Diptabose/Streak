@@ -79,8 +79,8 @@ const client = await pool.connect();
   typers.splice(index,1);
   socket.broadcast.emit('typerlist',typers);
      },3000);
-    }
-    else{
+    
+
      typers.push(uname);
      socket.broadcast.emit('typerslist',typers);
    }
