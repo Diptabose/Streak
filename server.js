@@ -475,9 +475,9 @@ const client = await pool.connect();
 
    activeUsers.splice(actIndex,1);
 
-   let typIndex=typers.indexOf(USERNAME);
+   
 
-   typers.splice(typIndex,1);
+ 
 
     //activeUsers.pop(users[socket.id]);
 
