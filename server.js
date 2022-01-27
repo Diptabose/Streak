@@ -130,10 +130,10 @@ const client = await pool.connect();
     activeUsers.push(name);
 
    // socket.broadcast.emit('user-joined',name);
-
+    socket.emit('online',activeUsers);
     socket.broadcast.emit("online",activeUsers);
 
-    socket.emit("ionline",activeUsers);
+    //socket.emit("ionline",activeUsers);
 
     test(1);
 
