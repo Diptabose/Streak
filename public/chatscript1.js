@@ -452,7 +452,7 @@ document.getElementById("logofix").classList.add("logoimg");
 //Display online users 
 function addOnlineUser(actvuser)
 {
-  console.log(actvuser);
+  console.log("Actvusers is "+actvuser);
   actvuser.forEach((item)=>{
     if(item==null||undefined)
     {
@@ -564,6 +564,7 @@ socket.on('left',name=>{
   }
  else{ 
    //append(`${name} left`,'center',0);
+   console.log("Removed user is "+name);
    removeOnlineUser(name);
 }
 });
