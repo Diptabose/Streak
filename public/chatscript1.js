@@ -493,11 +493,13 @@ TextInp.addEventListener('input',()=>{
 
 //Typing information
 socket.on("typerslist",(typers)=>{
+  console.log("before removing uname "+typers);
   if(typers.includes(uname))
   {
     var index= typers.indexOf(uname)
     typers.splice(index,1);
   }
+  console.log("After removing uname "+typers);
   var len=typers.length;
   let str= typers.join(", ");
   let str1="";
