@@ -30,7 +30,8 @@ global.io=socketIO(app);
 let transporter = nodemailer.createTransport({
 
   service: 'gmail',
-
+  port:465,
+  secure:true,
   auth: {
 
     user: 'diptabose484@gmail.com',
