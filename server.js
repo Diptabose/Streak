@@ -158,13 +158,13 @@ const client = await pool.connect();
 
    });
  function removeTyperThreeSec(){
-
+console.log("Removing user");
   var index= typers.indexOf(USERNAME);
 
   typers.splice(index,1);
 
   socket.broadcast.emit('typerlist',typers);
-
+console.log('After removing user '+typers);
      }
 
  socket.on('CheckOutdatedVersionUser',async(name,verify)=>{
