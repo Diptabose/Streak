@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function LoadMsg(){
 //       var id= setTimeout(function() {
 //         document.location.reload();
 //       },4000);
-     socket.emit("FetchMsg",function onFetch(MsgJson){
+     socket.emit("FetchMsg",msgid,function onFetch(MsgJson){
        if(!userCount>0){
          var typeJson= typeof MsgJson;
          console.log("Typeof MsgJson is "+typeJson)
@@ -575,7 +575,7 @@ function ScrollFetch()
 //     var id=setTimeout(function() {
 //       document.location.reload();
 //     }, 4000);
-    socket.emit("FetchMsg",function onFetch(MsgJson){
+    socket.emit("FetchMsg",msgid,function onFetch(MsgJson){
     var typeofMsgJson= typeof MsgJson;
     if(typeofMsgJson=="string")
     {
