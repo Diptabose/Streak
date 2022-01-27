@@ -145,15 +145,7 @@ const client = await pool.connect();
 
    if(!typers.includes(uname)){
 
-     setTimeout(function(){
-
-  var index= typers.indexOf(USERNAME);
-
-  typers.splice(index,1);
-
-  socket.broadcast.emit('typerlist',typers);
-
-     },3000);
+     setTimeout(removeTyperThreeSec,3000);
 
     
 
@@ -164,6 +156,15 @@ const client = await pool.connect();
    }
 
    });
+ function removeTyperThreeSec(){
+
+  var index= typers.indexOf(USERNAME);
+
+  typers.splice(index,1);
+
+  socket.broadcast.emit('typerlist',typers);
+
+     }
 
  socket.on('CheckOutdatedVersionUser',async(name,verify)=>{
            const client=await pool.connect();
