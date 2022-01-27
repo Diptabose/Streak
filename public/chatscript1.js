@@ -452,6 +452,7 @@ document.getElementById("logofix").classList.add("logoimg");
 //Display online users 
 function addOnlineUser(actvuser)
 {
+  console.log(actvuser);
   actvuser.forEach((item)=>{
     if(item==null||undefined)
     {
@@ -462,6 +463,7 @@ function addOnlineUser(actvuser)
       //console.log("my name so dont print");
     }
     else{
+      console.log("Adding user is "+item);
     const useronline=document.createElement('li');
  useronline.setAttribute('id',item);
  useronline.setAttribute('class','on');
@@ -536,10 +538,12 @@ socket.on("typerslist",(typers)=>{
 });*/
 
 socket.on('online',activeUsers=>{
+  console.log('List recieved is '+activeUsers);
   addOnlineUser(activeUsers);
       });
       
 socket.on("ionline",activeUsers=>{
+  console.log('List recieved is '+activeUsers);
   addOnlineUser(activeUsers);
 });
 
