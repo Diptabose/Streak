@@ -9,7 +9,7 @@
    preferTheme=window.localStorage.getItem("isDark")
    if(preferTheme==null||preferTheme==undefined)
    {
-     console.log("theme in storage is null");
+     //console.log("theme in storage is null");
    }
    else if(preferTheme=="1")
    {
