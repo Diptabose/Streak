@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+ <title>Streaks</title>
+  <link rel="stylesheet" type="text/css" href="streaks2.css" >
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <script src="/socket.io/socket.io.js">
+  </script>
+
+ 
+
+</head>
+
+<body id="body" >
+            
+  <div id="header">
+       <div id="header1">
+         <h2 style="color:black" id="streaksname">Streaks🔥</h2>
+        
+      
+         <button id="settings" class="settings_button"><img src="3dot.png" alt=""></button>
+ 
+   <div id="popup" class="slidemenu"> 
+        <div>
+         <ul>
+             <div class="switch_align">
+             <p>DarkMode</p>
+             <button id="switch" class="toggle"><div
+              id="switchball" class="toggle-ball"></div></button>
+             </div>
+             <div id="logout"><p style="color:black;">Logout</p></div>
+         </ul>
+       </div>
+    </div>
+         
+         
+         
+         
+         
+         
+       </div>
+       
+       
+          
+     
+        <div id="blocker"></div>
+       
+       
+       
+       
+       
+       
+       <div id="header2">
+         <div id="contentNav">
+          <button id="score" class="borderbottom">Score</button>
+          <button id="ichat" class="borderbottom">iChat</button>
+          <button id="about" class="borderbottom">About</button>
+          </div>
+       </div>
+     </div>
+  <div class="contentscroll">
+    <div class="contentWrapper">
+      
+ <div id="Contentid" class="snapstop aligncol">
+   
+   <h2 id="userinsert">Welcome</h2>
+   <p class="flame">🔥</p>
+   <h1 id="streakscore">0</h1>
+   <button id="update">Update</button>
+   <p id="timerlogo" ></p>
+   <h2 id="timer">Time Remaining : 00:00:00</h2>
+ </div>
+ 
+<div id="Chatid" class="snapstop">
+  <div class="pad">
+   <div class="chatLink">
+     <img class="personDp" src="Logo.webp" alt="">
+     <div class="msgContent">
+     <div class="nametime">
+   <p><b id="cname">  </b><p>
+    <!-- <span>5:34</span>-->
+     </div>
+     <p>Enter the chat </p>
+     </div>
+   </div>
+   </div>
+ </div>
+ 
+ <div id="AboutPageid" class="snapstop ">
+   <div class="align-center">
+     <p class="flame circle">🔥</p>
+     <p class="">Streaks was an initial attempt to bring Snapchat👻 on web.Login pages were created and the project went to halt. Soon interest took over to recreate OTP verification on the login pages. This was the first time Streaks was on the web going online,hosted on firebase.
+     </p>
+     <p> Take a look on how we started</p>
+     <div class="imgShower">
+         <img src=/2s.jpg alt="img1" />
+         <img src=/3s.jpg alt="img2" />
+         <img src=/4s.jpg alt="img3" />
+         <img src=/5s.jpg alt="img4" />
+         <img src=/6s.jpg alt="img5" />
+          <img src=/7s.jpg alt="img6" />
+     </div>
+    </div>
+  <div class="align-center">
+     <p class="">
+     Later on the idea was converged on maintaining streak count/score obtained by abstaining from 💦.An inbuild chat system was developed so as to fill the gaps of communication which we call it <b> The Ichat</b>
+     We moved forward by merging/integrating Ichat to Streaks which gave birth to <b>Streaks V1.5.</b>hosted on Heroku
+      </p>
+     <div class="changelogBox ">
+       <div class="changelogs">&#9432; Changelogs V1.5</div>
+       <div class="changelogContent">
+
+    <li>Added Streak intro</li>
+          <li>Added Login setup</li>
+            <li>Added OTP verification</li>  <li>Redesigned Streaks Homepage</li> <li>Added timer and fixed problems in timer</li><li>Integrated ichat with streaks</li><li>Redesigned ichat completely</li> <li>Added option to view online users</li><li>Added typing info</li>
+            <li>Made ichat header fixed</li>
+            <li >Addressed issues caused by name prompt</li>
+            <li >Addressed null and undefined messages from server </li>
+            <li >Nuked sending photos causing ping timeout</li>
+            <li >Some under the hood changes </li>
+       </div>
+       </div>
+     
+  </div>
+  <div class="align-center">
+      <p class="">
+        With an aim to scale the project, we started working on Streaks V2.0.And soon our server was dead for several months. This enabled us to work on UI/UX , implement dark themes ,chat themes,animations amd many fixes. And when our server was back we implemented database to allow cross device logins... And what's more ?, lets dive into the changelogs.
+      </p>
+     <div class="changelogBox ">
+       <div class="changelogs">&#9432; Changelogs V2.0</div>
+       <div class="changelogContent">
+             <li > Added form validation</li>
+             <li> Added email verification.Now disposable and invalid email will be rejected</li>
+             <li> Moved OTP generation and sending on server</li>
+             <li> Added Login and Signup Pages</li>
+             <li> Implemented Application wide Dark mode</li>
+             <li>Changes in Streaks Header</li>
+           <li>Added animation to Streaks fire. Its live now </li>
+           <li > Changes update button </li>
+           <li > Enables scroll between pages in Streaks</li> 
+           <li > Changed Ichat Page in Streaks </li>
+           <li > Redesgin About Page</li>
+           <li > Moved footer to About page</li>
+           <li> Changes in Ichat header</li>
+           <li > Added 5 predefined themes on Ichat</li>
+           <li> Added option to choose own color pallete in themes</li>
+           <li> Changed text input to text area for better experience</li>
+           <li> Implemented database .Now chats are stored and secured </li>
+           <li> Added random colors to sender's name in Ichat</li>
+           <li> Attempt to make connection with server reliable</li>
+          <li> Nuked typing info and online option. They are unstable for now</li>
+           <li> Miscellaneous changes which I dont remember</i>
+       </div>
+       </div>
+     </div>
+    <div class="devs">
+    <center><h3>Devs</h3></center>
+      <div class="align-dev-v">
+      <div class="align-dev">
+        <img class="devsimg" src="/bose.jpg" />
+        <div class="align-names">
+        <span>Bose</span>
+        <span>Lead Developer & UI/UX Designer</span>
+        </div>
+        </div>
+        <hr>
+       <div class="align-dev">
+        <img class="devsimg" src="/vardhan.JPG" />
+        <div class="align-names">
+        <span>Vardhan</span>
+        <span>UI/UX Designer and Tester V2.0</span>
+        </div>
+        </div>
+        <hr>
+         <div class="align-dev">
+        <img class="devsimg" src="/rath.JPG" />
+        <div class="align-names">
+        <span>Rathnam</span>
+        <span>Tester V1.5</span>
+        </div>
+        </div>
+     </div>
+     </div>
+   <div class="align-center">
+     <h3>Acknowledgements</h3>
+     <p>Thanks to Vardhan for suggesting UI/UX designs and for his immense help in debugging the build.A big thanks to my parents❣️ who motivated me althrough the way.Thanks to stackoverflow , geekforgeeks , youtube for resolving our queries😅</p>
+    </div>
+   <div id="footer">
+ <p>Contact: <a href="tel://9381327381">+91 9381327381</a></p>
+    <p>Email: streaksa1251@gmail.com</p>
+    <p>Project OpenSource: <a href="https://github.com/Diptabose/Streak.git">GitHub</a></p>
+  </div>
+ </div>
+  </div>
+  </div>
+
+   <script src="/streakscript2.js" >
+  </script>
+   <script  src="/UnifiedDarkTheme.js"></script>
+  <script src="/ForceLogin.js"></script>
+</body>
+</html>
