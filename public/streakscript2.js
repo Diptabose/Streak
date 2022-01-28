@@ -92,11 +92,10 @@ function DomLoad(){
    }
    else if(et<86400)
    {
-    /* var eth=CalH(et);
+    var eth=CalH(et);
      var etm=CalM(et);
-     var ets=CalS(et);*/
-   /*  RemainingTime((23-(eth)),(59-(etm)),(59-(ets)));*/
-   RemainingTime();
+     var ets=CalS(et);
+    RemainingTime((23-(eth)),(59-(etm)),(59-(ets)));
      UpdateBtn.removeEventListener("click",Updater);
    }
   }
@@ -125,24 +124,7 @@ function DomLoad(){
   }
   
   
-  function RemainingTime(){
-    let timefromMem=parseInt(window.localStorage.getItem('UpdatedTime'));
-    let d= new Date();
-    let time=timefromMem+86400;
-    const id=setInterval(function(){
-      let h= CalH(time-d.getTime());
-      let m=CalM(time-d.getTime());
-      let s= CalS(time-d.getTime());
-      if(h==0&&m==0&&m==0)
-      {
-        clearInterval(id);
-        UpdateBtn.addEventListener("click",Updater);
-      }
-      else{
-    Timer.innerText="Time Remaining:"+h+":"+m+":"+s;
-      }
-    },1000)
-  }
+  
 
 function Updater(){
   var d= new Date();
@@ -160,13 +142,13 @@ function Updater(){
  StreakScore.innerText=window.localStorage.getItem("streakscore");
   }
  UpdateBtn.removeEventListener("click",Updater);
- RemainingTime();
+ RemainingTime(23,59,59);
  updateDetailsOnServer(String(d.getTime()),text);
 }
 
 
 
-/*function RemainingTime(h,m,s)
+function RemainingTime(h,m,s)
 {
   var time=setInterval(function timeron() {
     s=s-1;
@@ -195,7 +177,30 @@ function Updater(){
     }
     Timer.innerText="Time Remaining:"+h+":"+m+":"+s;
   }, 1000);
-}*/
+  /*let hr=h;let min=m;let sec=s;
+  const hid=setInterval(function(){
+    hr=hr-1;
+  },3600000)
+  const minid=setInterval(function(){
+    min=min-1;
+    if(min==-1)
+    {
+      min=59
+    }
+  },60000);
+  const secid=setInterval(function(){
+    sec=sec-1;
+    if(sec==-1)
+    {
+      sec=59;
+    }
+  },1000);
+
+    clearTimeout(hid);
+    clearTimeout(minid);
+    clearTimeout(secid);*/
+  
+}
 
 function updateDetailsOnServer(time,nullInc){
    const id=setTimeout(function errorPage(){
