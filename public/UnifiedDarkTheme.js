@@ -3,7 +3,7 @@ var switch_ball=document.getElementById("switchball");
 
 dark_toggle.addEventListener("click",()=>{
   currentTheme=document.documentElement.getAttribute('theme');
-  console.log("Curent theme is" + currentTheme);
+  //console.log("Curent theme is" + currentTheme);
   
   if(currentTheme=="light"){
     document.documentElement.setAttribute('theme','dark');
@@ -42,7 +42,7 @@ window.localStorage.setItem("isDark",value);
 document.addEventListener("DOMContentLoaded",()=>{
   
  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-  console.log("Match",prefersDarkScheme.matches);
+  //console.log("Match",prefersDarkScheme.matches);
   if(prefersDarkScheme.matches){
   switch_ball.classList.add("toggle-ball-switch");
   document.documentElement.setAttribute("theme", "dark");
@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded",()=>{
       document.documentElement.setAttribute("theme", "light");
     }
    preferTheme=window.localStorage.getItem("isDark")
-   console.log("isDark"+preferTheme);
+   //console.log("isDark"+preferTheme);
    if(preferTheme==null||preferTheme==undefined)
    {
-     console.log("theme in storage is null");
+    // console.log("theme in storage is null");
    }
    else if(preferTheme=="1")
    {
