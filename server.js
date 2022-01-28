@@ -64,7 +64,7 @@ io.on('connection',async(socket)=>{
 const client = await pool.connect();
  var res= await client.query("select max(chatno) from messages");
  var ServerEnd= res.rows[0].max;
- console.log(res);
+// console.log(res);
  await client.release();
  var offset=0;
  let USERNAME=null;
@@ -77,7 +77,7 @@ const client = await pool.connect();
        offset=0;
      }
       const res= await client.query('select * from (select * from messages order by chatno desc limit $1) as foo offset $2 limit 50 ',[ServerEnd,offset]);
-      console.log(res.rows);
+      //console.log(res.rows);
       if(res.rows.length!=0){
       const JsonRes=await JSON.stringify(res.rows);
       sendMsgJson(JsonRes);
@@ -86,14 +86,14 @@ const client = await pool.connect();
       }
     }catch(error)
     {
-      console.error(error);
+     // console.error(error);
       await client.release();
     }
   });
 
   socket.on('new-user-joined',async(name,test)=>{
 
-    console.log('User',name);  
+    //console.log('User',name);  
 
     users[socket.id]=name;
     USERNAME=name;
@@ -137,27 +137,27 @@ const client = await pool.connect();
 
     try{
       const res= await client.query('insert into messages(sender,msg) values($1,$2)',[sender , message]);
-      console.log("Msg inserted");
+     // console.log("Msg inserted");
       await client.release();
     }
     catch(error)
     {
-      console.error(error);
+      //console.error(error);
       await client.release();
     }
   });
 
  socket.on("InsertUser",async (name,mail,password,verifyuser)=>{
    let entry;
-   console.log("Transfer shifted to server");
+  // console.log("Transfer shifted to server");
    const client = await pool.connect();
-   console.log("Client connceted");
+  // console.log("Client connceted");
    try{
    const res= await client.query(`select username,email from login where username=$1 and email=$2`,[name,mail]);
-     console.log(res.rowCount);
+    // console.log(res.rowCount);
       if(res.rowCount>0)
       {
-        console.log("User present already");
+       // console.log("User present already");
         verifyuser(0);
         await client.release();
       }
@@ -168,22 +168,22 @@ const client = await pool.connect();
         const mailOption=mailRecieverLoad(mail,OTP);
         mailSend(mailOption);
         verifyuser(OTP);*/
-     console.log("Inserting user in db");
+    // console.log("Inserting user in db");
      try{
      const res1= await client.query('insert into login(username,email,password)values($1,$2,$3)',[name,mail,password]);
-       console.log(res1);
+       //console.log(res1);
        verifyuser(1);
      }
      catch(err)
      {
-       console.error(err);
+      // console.error(err);
        verifyuser(-1);
        await client.release();
      }
       }
    }catch(err){
      verifyuser(-2);
-     console.error(err);
+    // console.error(err);
      await client.release();
    }
     }
@@ -258,7 +258,7 @@ const client = await pool.connect();
 
        const res= await client.query('select * from login where email=$1',[mail]);
 
-       console.log(res)
+     //  console.log(res)
 
        
 
@@ -284,7 +284,7 @@ const client = await pool.connect();
 
        confirm(-1);
 
-       console.error(error);
+      // console.error(error);
 
        await client.release();
 
@@ -298,14 +298,14 @@ const client = await pool.connect();
      const client = await pool.connect();
        try{
          const res= await client.query('update login set streakscore=$1,updatedtime=$2 where username=$3',[value,utime,name]);
-         console.log(res);
+        // console.log(res);
          await client.release();
          Updated(1);
        }
        catch(error)
        {
          Updated(0);
-         console.error(error);
+        // console.error(error);
          await client.release();
        }
    });
