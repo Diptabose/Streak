@@ -206,11 +206,18 @@ function updateDetailsOnServer(time,nullInc){
    const id=setTimeout(function errorPage(){
     // document.location.reload(1);
     document.location.replace="Error.html";
-  },8000);
+  },10000);
     socket.emit("StkTimeUpt",UserName,time, nullInc,(confirm)=>{
       if(confirm==1)
       {
         clearTimeout(id);
+      }
+      else{
+        let score= window.localStorage.getItem('streakscore');
+        score=score-1;
+      window.localStorage.setItem('streakscore',JSON.stringify(score));
+      window.localStorage.setItem('UpdatedTime','0');
+      DomLoad();
       }
     });
 }
