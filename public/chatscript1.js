@@ -448,7 +448,7 @@ document.getElementById("logofix").classList.add("logoimg");
 });
 
 
-onlineBtn.addEventListener("click",()=>{socket.emit("online",(users)=>{console.log(users);addOnlineUser(users)})});
+//onlineBtn.addEventListener("click",()=>{socket.emit("online",(users)=>{console.log(users);addOnlineUser(users)})});
 //Display online users 
 function addOnlineUser(actvuser)
 {
@@ -537,15 +537,15 @@ socket.on("typerslist",(typers)=>{
   //append(`${name} joined`,'center',0);
 });*/
 
-//socket.on('online',activeUsers=>{
-//   console.log('List recieved is '+activeUsers);
-//   addOnlineUser(activeUsers);
-//       });
+socket.on('online',activeUsers=>{
+console.log('List recieved is '+activeUsers);
+addOnlineUser(activeUsers);
+});
       
-// socket.on("ionline",activeUsers=>{
-//   console.log('List recieved is '+activeUsers);
-//   addOnlineUser(activeUsers);
-// });
+socket.on("ionline",activeUsers=>{
+console.log('List recieved is '+activeUsers);
+   addOnlineUser(activeUsers);
+ });
 
 socket.on('recieve',data=>{
   append_recieve(`${data.message}`,'left',`${data.name}`,0)
