@@ -52,8 +52,8 @@ else{
 
 function showerror(x,y)
 {
-  console.log("We are inside showerror");
-  console.log(x);
+ // console.log("We are inside showerror");
+ // console.log(x);
   x.classList.remove("rederrormsg");
   x.classList.add("showrederrormsg");
   y.classList.add("redborderforinput");
