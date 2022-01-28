@@ -168,7 +168,7 @@ themereset.addEventListener("click",()=>{
   headerColorWindow.style.backgroundImage="linear-gradient(to top right , violet , indigo , blue , green , yellow , orange , red)";
   // activeTheme="def";
    toggleWhiteText();
-   console.log("Checking is dark "+window.localStorage.getItem('isDark'));
+  // console.log("Checking is dark "+window.localStorage.getItem('isDark'));
   if(window.localStorage.getItem("isDark")=="1"){
      root.style.setProperty("--ThemeBody","url('/ChatDark1.png')");
    }
@@ -248,11 +248,11 @@ let serverend=0;
 document.addEventListener("DOMContentLoaded", function LoadMsg(){
   
  
-  console.log("We are here inside LoadMsg");
-  console.log("Sending request");
+ // console.log("We are here inside LoadMsg");
+//  console.log("Sending request");
   socket.emit('new-user-joined',uname,(initFetch)=>
   {
-    console.log(initFetch);
+  //  console.log(initFetch);
     if(initFetch===1)
     {
 //       var id= setTimeout(function() {
@@ -261,20 +261,20 @@ document.addEventListener("DOMContentLoaded", function LoadMsg(){
      socket.emit("FetchMsg",serverend,function onFetch(MsgJson){
        if(!userCount>0){
          var typeJson= typeof MsgJson;
-         console.log("Typeof MsgJson is "+typeJson)
+        // console.log("Typeof MsgJson is "+typeJson)
          if(typeJson=="string"){
 //            clearTimeout(id);
     userCount++;   
-    console.log("Msg recieved from server");
-    console.log(MsgJson);
+   // console.log("Msg recieved from server");
+   // console.log(MsgJson);
     const ParseMsgJson= JSON.parse(MsgJson);
     serverend=Number(ParseMsgJson[0].id);
     var prevMsgs= ParseMsgJson;
-    console.log(prevMsgs);
+   // console.log(prevMsgs);
    prevMsgs.forEach(printMsg);
     
    fetchcount=prevMsgs.length;
-   console.log("Fetchcount is 30 onload",fetchcount);
+  // console.log("Fetchcount is 30 onload",fetchcount);
    isFetched=1;
    messageContainer.scrollTop=messageContainer.scrollHeight;
        }
@@ -329,7 +329,7 @@ function append(message,position,flag)
  else if(flag===1)
  {
   messageElement.setAttribute('id',String(msgid));
-     console.log("id added "+message+ "is"+msgid+" in"+flag);
+   //  console.log("id added "+message+ "is"+msgid+" in"+flag);
    messageContainer.insertBefore(messageElement,messageContainer.childNodes[0]);
    
  }
@@ -362,7 +362,7 @@ function append_recieve(message , position,Sendername,flag)
  }
  else if(flag===1){
    messageElement.setAttribute('id',String(msgid));
-     console.log("id added to"+message+"is "+msgid+" in"+flag);
+     //console.log("id added to"+message+"is "+msgid+" in"+flag);
    messageContainer.insertBefore(messageElement,messageContainer.childNodes[0]);
  }
 }
@@ -403,7 +403,7 @@ sendbtn.addEventListener('click',(event)=>{
 
 //Logo fixing on input focus
 TextInp.addEventListener('focus',(event)=>{
-  console.log("Focused and changed");
+  //console.log("Focused and changed");
  
 document.getElementById("logofix").classList.remove("logoimg");
 document.getElementById("logofix").classList.add("Logofix");
@@ -506,12 +506,12 @@ function removeOnlineUser(offuser)
 });*/
 
 socket.on('online',activeUsers=>{
-console.log('List recieved is '+activeUsers);
+//console.log('List recieved is '+activeUsers);
 addOnlineUser(activeUsers);
 });
       
 socket.on("ionline",activeUsers=>{
-console.log('List recieved is '+activeUsers);
+//console.log('List recieved is '+activeUsers);
    addOnlineUser(activeUsers);
  });
 
@@ -532,7 +532,7 @@ socket.on('left',name=>{
   }
  else{ 
    //append(`${name} left`,'center',0);
-   console.log("Removed user is "+name);
+   //console.log("Removed user is "+name);
   // removeOnlineUser(name);
 }
 });
@@ -546,7 +546,7 @@ function ScrollFetch()
 {
   if(messageContainer.scrollTop==0)
   {
-    console.log("Here Scroll Top got 0");
+    //console.log("Here Scroll Top got 0");
 //     var id=setTimeout(function() {
 //       document.location.reload();
 //     }, 4000);
@@ -556,12 +556,12 @@ function ScrollFetch()
     if(typeofMsgJson=="string")
     {
 //       clearTimeout(id);
-    console.log("Msg recieved from server");
-    console.log(MsgJson);
+   // console.log("Msg recieved from server");
+  //  console.log(MsgJson);
     const ParseMsgJson= JSON.parse(MsgJson);
     var prevMsgs= ParseMsgJson;
     serverend=Number(ParseMsgJson[0].id);
-    console.log(prevMsgs.length);
+  //  console.log(prevMsgs.length);
     if(prevMsgs.length==0)
     {
       //Do nothing
@@ -569,7 +569,7 @@ function ScrollFetch()
     else
     {
     prevMsgs.forEach(printMsg);
-    console.log("Function returned");
+  //  console.log("Function returned");
   
     document.getElementById(String(50*iterate)).scrollIntoView();
     iterate++;
