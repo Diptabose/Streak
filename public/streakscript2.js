@@ -74,9 +74,9 @@ function DomLoad(){
   else if(parseInt(upt)!=0)
   {
    var et=Math.floor((d.getTime()-upt)/1000);
-   console.log("The actual time: "+d.getTime());
-   console.log("Updated Time: "+parseInt(upt));
-   console.log("ElapsedTime: "+et);
+  // console.log("The actual time: "+d.getTime());
+   //console.log("Updated Time: "+parseInt(upt));
+  // console.log("ElapsedTime: "+et);
    if(et>100800)
    {
      //Update streaks on server;
@@ -104,14 +104,14 @@ function DomLoad(){
   
   function CalH(sec){
     var hr = Math.floor(sec/3600);
-    console.log(hr);
+    //console.log(hr);
     return hr;
   }
   function CalM(sec){
     var dhr=sec/3600;
     var hr= Math.floor(sec/3600);
     var fh = Math.floor((dhr-hr)*60);
-    console.log(fh);
+   // console.log(fh);
     return fh;
   }
   function CalS(sec){
@@ -130,7 +130,7 @@ function Updater(){
   var d= new Date();
   window.localStorage.setItem("UpdatedTime",JSON.stringify(d.getTime()));
   TimerLogo.innerText="";
-  console.log("Update is clicked");
+  //console.log("Update is clicked");
   var text=Number(window.localStorage.getItem("streakscore"));
   text=text+1;
   window.localStorage.setItem("streakscore",text.toString());
@@ -224,7 +224,7 @@ function updateDetailsOnServer(time,nullInc){
 
 score.addEventListener('click',()=>{
   ContentPage.scrollIntoView(true);
-  console.log("clicked")
+ // console.log("clicked")
 });
 ichat.addEventListener('click',()=>{
   ChatPage.scrollIntoView(true);
