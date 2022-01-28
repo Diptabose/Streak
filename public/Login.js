@@ -40,7 +40,7 @@ emailValid(mail.value).then((data)=>{
  socket.emit("InsertUser",username.value,mail.value,pass.value,(eValue)=>{
   if(eValue===0)
  {
-  console.log("Value of entry from if:",eValue);
+ // console.log("Value of entry from if:",eValue);
   username.focus();
   serverError.innerHTML="Username exists!!!"
   showerror(serverError,username);
@@ -61,7 +61,7 @@ emailValid(mail.value).then((data)=>{
  }
  else if(eValue==1)
  {
-   console.log("Value of entry from else value 1:",eValue);
+  // console.log("Value of entry from else value 1:",eValue);
   window.localStorage.setItem("uname",username.value);
   window.sessionStorage.setItem("umail",mail.value);
   window.sessionStorage.setItem("upassword",pass.value);
@@ -80,8 +80,8 @@ else{
 }
 function showerror(x,y)
 {
-  console.log("We are inside showerror");
-  console.log(x);
+  //console.log("We are inside showerror");
+ // console.log(x);
   x.classList.remove("rederrormsg");
   x.classList.add("showrederrormsg");
   y.classList.add("redborderforinput");
@@ -91,7 +91,7 @@ async function emailValid(email){
   var url = "https://emailvalidation.abstractapi.com/v1/?api_key=9a817cf66fd24c489dc2c04323c9df4a&email="+email;
   var emailCheck= await fetch(url);
   var respjson= await emailCheck.json();
-  console.log(respjson);
+ // console.log(respjson);
   if(respjson.deliverability=="DELIVERABLE"||respjson.is_mx_found.text=="TRUE")
   {
     return true;
