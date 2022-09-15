@@ -274,7 +274,7 @@ h1,h2,p,h3,span{
   border-radius:50%;
 }
 .flame{
-  font-size:60px;
+  font-size:110px;
   animation-name:flame;
   animation-duration:0.3s;
   animation-iteration-count:infinite ;
@@ -305,8 +305,8 @@ h1,h2,p,h3,span{
   color: var(--para-color);
 }
 .imgShower{
-  width:50%;
-  height:70%;
+  width:250px;
+  height:450px;
   display:flex;
   border-radius:1rem;
   padding:4px;
@@ -417,6 +417,7 @@ align-items:flex-start;
   border-radius:50%;
   padding:0px 5px 0px 5px;
   margin-top:24px;
+  margin-bottom:24px;
   box-shadow:0 0 24px #ff5400;
 }
 
@@ -439,6 +440,9 @@ align-items:flex-start;
 }
 .pad{
   padding:10px;
+}
+.pmaxwidth{
+  max-width:560px;
 }
 
 
