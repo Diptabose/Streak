@@ -313,6 +313,8 @@ html
   margin:2%;*/
   width:98%;
   bottom:0;
+  display:flex;
+  height:10%;
 }
 
 #text-type{
