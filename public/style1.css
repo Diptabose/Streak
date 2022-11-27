@@ -88,7 +88,9 @@ cursor:pointer;
 }
 
 
-
+*::-webkit-scrollbar{
+  width:0px;
+}
 
 
 
@@ -353,6 +355,7 @@ textarea::-webkit-scrollbar{
   width:40px;
   margin-right:2px;
   margin-left:2px;
+  cursor:pointer;
 }
 
 #chatMenu{
@@ -366,8 +369,8 @@ textarea::-webkit-scrollbar{
 }
 
 #chatMenu img{
-  width:30px;
-  height:30px;
+  width:20px;
+  height:20px;
 }
 
 #chatSettings{
