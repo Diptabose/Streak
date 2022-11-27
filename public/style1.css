@@ -64,14 +64,9 @@
 .message{
   display:flex;
   flex-direction:column;
-  /*flex:wrap;*/
- min-width:10%;
   max-width:60%;
   width:auto;
- 
-
   background-color:var(--message-bg-color);
-/*border:2px solid black;*/
   border-radius:10px;
   padding:6px;
   padding-right:10px;
