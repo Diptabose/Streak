@@ -430,7 +430,7 @@ textarea::-webkit-scrollbar{
   border-top:2px solid black ;
   background-color:var(--ThemeOptions-bg);
   width:100%;
-  height:50%;
+  
   /*margin:auto;*/
   z-index:1; /*2*/
 /*  top:-11.11%;*/
