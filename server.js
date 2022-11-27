@@ -44,7 +44,7 @@ let transporter = nodemailer.createTransport({
 
 const pool=new pg.Pool({
 
- connectionString: process.env.DATABASE_URL,
+ connectionString: /*process.env.DATABASE_URL*/"postgres://bose:SYzpviADLEWrKI63yCgRAYrPSYnxaSc6@dpg-ce1g2jen6mpu84vvh81g-a.singapore-postgres.render.com/streaks_db",
 
   ssl: {
 
