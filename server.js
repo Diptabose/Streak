@@ -76,7 +76,7 @@ const client = await pool.connect();
 //        ServerEnd=newserverend;
 //        offset=0;
 //      }
-      const res= await client.query('select * from (select * from messages order by chatno desc where chatno<=$1) as allmsgs offset $2 limit 50 ',[ServerEnd,offset]);
+      const res= await client.query('select * from (select * from messages order by chatno desc limit $1) as allmsgs offset $2 limit 50 ',[ServerEnd,offset]);
       //console.log(res.rows);
       if(res.rows.length!=0){
       const JsonRes=await JSON.stringify(res.rows);
