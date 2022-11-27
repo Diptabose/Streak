@@ -83,7 +83,9 @@
  background-color:var(--sender-msg-color);
 }
 
-
+button{
+cursor:pointer;
+}
 
 
 
