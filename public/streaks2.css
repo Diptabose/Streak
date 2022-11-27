@@ -54,6 +54,10 @@ html{
   width:100%;
 }
 
+.lineheight{
+  line-height:30px;
+}
+
 *::-webkit-scrollbar{
   width:0px;
 }
