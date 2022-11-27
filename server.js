@@ -71,12 +71,12 @@ const client = await pool.connect();
   socket.on("FetchMsg",async(newserverend,sendMsgJson)=>{
     const client= await pool.connect();
     try{
-     if(newserverend!=0)
-     {
-       ServerEnd=newserverend;
-       offset=0;
-     }
-      const res= await client.query('select * from (select * from messages order by chatno desc limit $1) as foo offset $2 limit 50 ',[ServerEnd,offset]);
+//      if(newserverend!=0)
+//      {
+//        ServerEnd=newserverend;
+//        offset=0;
+//      }
+      const res= await client.query('select * from (select * from messages order by chatno desc where chatno<=$1) as allmsgs offset $2 limit 50 ',[ServerEnd,offset]);
       //console.log(res.rows);
       if(res.rows.length!=0){
       const JsonRes=await JSON.stringify(res.rows);
