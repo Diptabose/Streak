@@ -54,6 +54,10 @@ html{
   width:100%;
 }
 
+*::-webkit-scrollbar{
+  width:0px;
+}
+
 body{
   position:relative;
   height:100%;
@@ -148,8 +152,9 @@ h1,h2,p,h3,span{
 }
 
 #settings img{
-  height:30px;
-  width:30px;
+  height:20px;
+  width:20px;
+  cursor:pointer;
 }
 
 #header{
@@ -188,6 +193,7 @@ h1,h2,p,h3,span{
   background: transparent;
   outline:none;
   border:none;
+  cursor:pointer;
 }
 #update{
   color:white;
@@ -197,6 +203,9 @@ h1,h2,p,h3,span{
   padding:5px 15px 5px 15px;
   outline:none;
   border:none;
+  cursor:pointer;
+  margin-top:10px;
+  margin-bottom:10px;
   box-shadow: 4px 4px 10px grey;
 }
 
@@ -313,9 +322,10 @@ h1,h2,p,h3,span{
   overflow-x:scroll;
   scroll-snap-type:x mandatory;
   box-shadow:6px 6px 10px grey;
+  cursor:pointer;
 }
 .imgShower::-webkit-scrollbar{
-  display:none;
+  width:0px;
 }
 .imgShower img{
   margin-right:10px;
