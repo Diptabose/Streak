@@ -75,6 +75,7 @@ const client = await pool.connect();
       //console.log(res.rows);
       if(res.rows.length!=0){
       const JsonRes=await JSON.stringify(res.rows);
+       console.log(JsonRes);
       sendMsgJson(JsonRes);
       await client.release();
       offset+=50;
