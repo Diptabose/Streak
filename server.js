@@ -19,17 +19,11 @@ const pg=require('pg');
 
 const INDEX='/IntroLogo.html';
 
-const app=express();
-app.use(express.static(path.join(__dirname,'public')))
-app.get('/',(req,res)=>{
+const app=express().use(express.static(path.join(__dirname,'public'))).get('/getstatic',(req,res)=>{
 
- res.sendFile(path.join(__dirname,'public','IntroLogo.html'));
-
-});
- app.get("/getstatic" , (req, res)=>{
+// res.sendFile(path.join(__dirname,'public','IntroLogo.html'));
   res.sendFile(path.join(__dirname , 'public' , 'statictestapp.html'));
- });
-app.listen(PORT,()=>console.log('listening..'));
+}).listen(PORT,()=>console.log('listening..'));
 
 global.io=socketIO(app);
 
