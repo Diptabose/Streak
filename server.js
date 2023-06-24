@@ -21,8 +21,8 @@ const INDEX='/IntroLogo.html';
 
 const app=express().use(express.static(path.join(__dirname,'public'))).get('/getstatic',(req,res)=>{
 
-// res.sendFile(path.join(__dirname,'public','IntroLogo.html'));
-  res.sendFile(path.join(__dirname , 'public' , 'statictestapp.html'));
+ res.sendFile(path.join(__dirname,'public','IntroLogo.html'));
+
 }).listen(PORT,()=>console.log('listening..'));
 
 global.io=socketIO(app);
