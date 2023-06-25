@@ -19,9 +19,9 @@ const pg=require('pg');
 
 const INDEX='/IntroLogo.html';
 
-const app=express().use(express.static(path.join(__dirname,'public'))).get('/getstatic',(req,res)=>{
+const app=express().use(express.static(path.join(__dirname,'public'))).get('/',(req,res)=>{
 
- res.sendFile(path.join(__dirname,'public','IntroLogo.html'));
+ res.sendFile(path.join(__dirname,'public',INDEX));
 
 }).listen(PORT,()=>console.log('listening..'));
 
